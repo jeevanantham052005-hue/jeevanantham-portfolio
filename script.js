@@ -633,7 +633,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     contactForm.addEventListener('submit', (e) => {
-      e.preventDefault();
       let isValid = true;
 
       if (!nameInput.value.trim() || nameInput.value.trim().length < 2) {
@@ -665,25 +664,13 @@ document.addEventListener('DOMContentLoaded', () => {
       }
 
       if (!isValid) {
+        e.preventDefault();
         showToast('Incomplete Form', 'Please review the highlighted fields above.', 'error');
         return;
       }
 
-      const origBtnText = submitBtn.innerHTML;
-      submitBtn.disabled = true;
-      submitBtn.innerHTML = `
-        <svg class="animate-spin-slow" style="animation-duration: 1s;" xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" viewBox="0 0 16 16">
-          <path d="M8 3a5 5 0 1 0 4.546 2.914.5.5 0 0 1 .908-.417A6 6 0 1 1 8 2v1z"/>
-        </svg>
-        <span>Sending Message...</span>
-      `;
-
-      setTimeout(() => {
-        submitBtn.disabled = false;
-        submitBtn.innerHTML = origBtnText;
-        contactForm.reset();
-        showToast('Message Sent Successfully!', 'Thank you for reaching out, Jeevanantham will get back to you shortly.', 'success');
-      }, 1200);
+      // Form is valid - allow it to submit to FormSubmit
+      // FormSubmit will handle the actual submission
     });
   }
 
