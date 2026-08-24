@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 260" fill="none">
+  <defs>
+    <linearGradient id="bg3" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0f172a"/>
+      <stop offset="100%" style="stop-color:#1a1a2e"/>
+    </linearGradient>
+    <linearGradient id="designGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#ec4899"/>
+      <stop offset="100%" style="stop-color:#7c3aed"/>
+    </linearGradient>
+  </defs>
+  <rect width="400" height="260" rx="18" fill="url(#bg3)" stroke="#ec4899" stroke-width="1.5" opacity="0.8"/>
+  <!-- Color palette circles -->
+  <circle cx="70" cy="100" r="40" fill="#7c3aed" opacity="0.9"/>
+  <circle cx="120" cy="100" r="40" fill="#ec4899" opacity="0.7"/>
+  <circle cx="95" cy="145" r="40" fill="#06b6d4" opacity="0.7"/>
+  <!-- Design grid mockup -->
+  <rect x="180" y="45" width="195" height="130" rx="12" fill="#1e293b"/>
+  <rect x="195" y="58" width="80" height="55" rx="8" fill="url(#designGrad)" opacity="0.9"/>
+  <rect x="285" y="58" width="75" height="25" rx="6" fill="#334155"/>
+  <rect x="285" y="90" width="55" height="10" rx="4" fill="#1e1b4b"/>
+  <rect x="285" y="107" width="65" height="10" rx="4" fill="#1e1b4b"/>
+  <rect x="195" y="122" width="55" height="8" rx="4" fill="#334155"/>
+  <rect x="195" y="138" width="80" height="8" rx="4" fill="#334155"/>
+  <rect x="195" y="154" width="45" height="8" rx="4" fill="#7c3aed" opacity="0.5"/>
+  <!-- Pen tool icon -->
+  <path d="M310 140 L330 120 L345 135 L325 155 Z" stroke="url(#designGrad)" stroke-width="2.5" fill="none" stroke-linejoin="round"/>
+  <line x1="310" y1="140" x2="300" y2="150" stroke="#ec4899" stroke-width="2" stroke-linecap="round"/>
+  <circle cx="345" cy="135" r="5" fill="#06b6d4"/>
+  <!-- Typography samples -->
+  <text x="200" y="200" font-family="Arial" font-size="11" font-weight="bold" fill="white">Aa Bb Cc</text>
+  <rect x="270" y="190" width="20" height="20" rx="4" fill="#7c3aed"/>
+  <rect x="298" y="190" width="20" height="20" rx="4" fill="#ec4899"/>
+  <rect x="326" y="190" width="20" height="20" rx="4" fill="#06b6d4"/>
+  <rect x="354" y="190" width="20" height="20" rx="4" fill="#f59e0b"/>
+  <!-- Bottom label -->
+  <text x="200" y="235" font-family="Arial" font-size="13" font-weight="bold" fill="white" text-anchor="middle">Graphic &amp; Brand Design</text>
+  <text x="200" y="252" font-family="Arial" font-size="10" fill="#64748b" text-anchor="middle">Logos · Posters · Identity</text>
+</svg>

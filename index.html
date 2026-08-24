@@ -1,0 +1,1244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jeevanantham | Student Developer, Web Designer &amp; Digital Marketer</title>
+  <meta name="description" content="Personal portfolio of Jeevanantham — B.E. CSE (AIML) student developer, web designer, digital marketer, and AI prompt engineer crafting impactful digital experiences.">
+  <meta name="keywords" content="Jeevanantham, Student Developer, Web Designer, Digital Marketer, AI Prompt Engineer, CSE AIML, Frontend Developer, Tamil Nadu">
+  <meta name="author" content="Jeevanantham">
+  
+  <!-- Open Graph / Social Meta -->
+  <meta property="og:title" content="Jeevanantham | Student Developer &amp; Web Designer">
+  <meta property="og:description" content="Designing digital experiences that make an impact with clean web code, engaging marketing, and creative AI workflows.">
+  <meta property="og:type" content="website">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+
+  <!-- Google Fonts Preconnect -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  
+  <!-- Main Stylesheet (Combined CSS & Animations) -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Background Ambient Particles Canvas -->
+  <canvas id="particleCanvas"></canvas>
+
+  <!-- Custom Animated Cursor Elements -->
+  <div class="custom-cursor-dot" aria-hidden="true"></div>
+  <div class="custom-cursor-outline" aria-hidden="true"></div>
+
+  <!-- =========================================================================
+       HEADER & NAVIGATION BAR
+       ========================================================================= -->
+  <header class="header">
+    <div class="container nav-container">
+      <a href="#hero" class="brand-logo" aria-label="Jeevanantham Home">
+        <div class="brand-icon">J.</div>
+        <div class="brand-name">
+          <span class="brand-name-main">Jeevanantham</span>
+          <span class="brand-role">Portfolio</span>
+        </div>
+      </a>
+
+      <!-- Desktop Navigation -->
+      <nav aria-label="Main Navigation">
+        <ul class="nav-menu">
+          <li><a href="#about" class="nav-link">About</a></li>
+          <li><a href="#skills" class="nav-link">Skills</a></li>
+          <li><a href="#projects" class="nav-link">Projects</a></li>
+          <li><a href="#education" class="nav-link">Education</a></li>
+          <li><a href="#services" class="nav-link">Services</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <button class="btn btn-outline-glow btn-sm" data-resume-open>
+          <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="currentColor" viewBox="0 0 16 16"><path d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5z"/><path d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3z"/></svg>
+          <span>Resume</span>
+        </button>
+        <button class="hamburger" aria-label="Toggle Mobile Menu" aria-expanded="false">
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer Overlay -->
+  <div class="mobile-nav-backdrop" aria-hidden="true"></div>
+  <aside class="mobile-nav-drawer" aria-label="Mobile Navigation">
+    <div class="mobile-drawer-top">
+      <div class="brand-logo" style="margin-bottom: 2rem;">
+        <div class="brand-icon">J.</div>
+        <div class="brand-name">
+          <span class="brand-name-main">Jeevanantham</span>
+          <span class="brand-role">Developer &amp; Marketer</span>
+        </div>
+      </div>
+      <ul class="mobile-menu">
+        <li><a href="#hero" class="mobile-link"><span class="mobile-link-num">01</span> Home</a></li>
+        <li><a href="#about" class="mobile-link"><span class="mobile-link-num">02</span> About Me</a></li>
+        <li><a href="#skills" class="mobile-link"><span class="mobile-link-num">03</span> Skills</a></li>
+        <li><a href="#projects" class="mobile-link"><span class="mobile-link-num">04</span> Projects</a></li>
+        <li><a href="#education" class="mobile-link"><span class="mobile-link-num">05</span> Education</a></li>
+        <li><a href="#services" class="mobile-link"><span class="mobile-link-num">06</span> Services</a></li>
+        <li><a href="#contact" class="mobile-link"><span class="mobile-link-num">07</span> Contact</a></li>
+      </ul>
+    </div>
+    <div class="mobile-drawer-bottom">
+      <button class="btn btn-primary" style="width: 100%; margin-bottom: 1rem;" data-resume-open>
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16"><path d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5z"/><path d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3z"/></svg>
+        <span>View &amp; Download Resume</span>
+      </button>
+      <div style="font-size: 0.8rem; color: var(--text-dim); text-align: center;">
+        Tiruppattur, Tamil Nadu, India
+      </div>
+    </div>
+  </aside>
+
+  <!-- =========================================================================
+       1. HERO SECTION
+       ========================================================================= -->
+  <section id="hero" class="hero">
+    <div class="container">
+      <div class="hero-grid">
+        
+        <!-- Hero Text & CTAs -->
+        <div class="hero-content reveal-init">
+          <div class="hero-status-pill">
+            <span class="status-dot"></span>
+            <span>Available for Projects &amp; Internships</span>
+          </div>
+
+          <div class="hero-greeting">Hello, I'm Jeevanantham</div>
+          
+          <h1 class="hero-title">
+            Designing Digital Experiences That <span class="gradient-text">Make an Impact.</span>
+          </h1>
+
+          <div class="hero-subheadline">
+            <span id="typewriterText">Student Developer &amp; AI Enthusiast</span>
+            <span class="typing-cursor">|</span>
+          </div>
+
+          <p class="hero-description">
+            Student Developer, Web Designer &amp; Digital Marketer creating modern websites, engaging designs, and practical digital solutions that blend technology, creativity, and business value.
+          </p>
+
+          <div class="hero-buttons">
+            <a href="#projects" class="btn btn-primary">
+              <span>View My Work</span>
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/></svg>
+            </a>
+            <a href="#contact" class="btn btn-secondary">
+              <span>Contact Me</span>
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16"><path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4Zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2Zm13 2.383-4.708 2.825L15 11.105V5.383Zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741ZM1 11.105l4.708-2.897L1 5.383v5.722Z"/></svg>
+            </a>
+            <button class="btn btn-outline-glow" data-resume-open>
+              <span>Download CV</span>
+            </button>
+          </div>
+
+          <div class="hero-highlights">
+            <div class="highlight-item">
+              <span class="highlight-icon">✦</span>
+              <span>B.E. CSE (AIML) @ Sri Sai Ranganathan</span>
+            </div>
+            <div class="highlight-item">
+              <span class="highlight-icon">✦</span>
+              <span>Bilingual (Tamil &amp; English)</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Hero Avatar Visual with 3D Aura & Floating Chips -->
+        <div class="hero-visual reveal-init delay-200">
+          <div class="avatar-wrapper">
+            <div class="avatar-aura"></div>
+            <div class="avatar-ring animate-spin-slow"></div>
+            
+            <div class="avatar-card">
+              <img src="assets/images/avatar.jpg.jpeg" alt="Jeevanantham - Student Developer &amp; Web Designer" class="avatar-img" width="420" height="420">
+            </div>
+
+            <!-- Floating Badges -->
+            <div class="floating-chip chip-1">
+              <span class="chip-icon">💻</span>
+              <div>
+                <div style="font-size: 0.75rem; color: var(--clr-accent-cyan);">FRONTEND DEV</div>
+                <div>HTML • CSS • JS</div>
+              </div>
+            </div>
+
+            <div class="floating-chip chip-2">
+              <span class="chip-icon">🤖</span>
+              <div>
+                <div style="font-size: 0.75rem; color: var(--clr-accent-pink);">AI &amp; PROMPTING</div>
+                <div>AIML Engineering</div>
+              </div>
+            </div>
+
+            <div class="floating-chip chip-3">
+              <span class="chip-icon">📈</span>
+              <div>
+                <div style="font-size: 0.75rem; color: var(--clr-accent-emerald);">DIGITAL GROWTH</div>
+                <div>Marketing &amp; Branding</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+  <!-- =========================================================================
+       2. ABOUT ME SECTION
+       ========================================================================= -->
+  <section id="about" class="section">
+    <div class="container">
+      <div class="section-header reveal-init">
+        <div class="section-tag">About Me</div>
+        <h2 class="section-title">Bridging Code, Creativity &amp; Growth</h2>
+        <p class="section-desc">
+          A passionate student developer constantly evolving across modern web interfaces, digital marketing strategy, and creative artificial intelligence.
+        </p>
+      </div>
+
+      <div class="about-grid">
+        <!-- Bio Narrative & Triad Cards -->
+        <div class="about-narrative reveal-init">
+          <p>
+            I am <strong>Jeevanantham</strong>, currently pursuing my <strong>B.E. in Computer Science and Engineering (Artificial Intelligence &amp; Machine Learning)</strong> at Sri Sai Ranganathan Engineering College (2023–2027), having completed my schooling at Brindavan Matriculation Higher Secondary School.
+          </p>
+          <p>
+            As a student developer with a strong entrepreneurial mindset, I focus on building practical, user-friendly digital solutions. Rather than specializing in just one isolated silo, I combine technical programming fundamentals with visual design sensitivity, digital marketing acumen, and AI prompt engineering workflows.
+          </p>
+          <p>
+            I have hands-on experience crafting responsive websites using clean HTML, CSS, and JavaScript, managing social media marketing campaigns to boost engagement, and designing branding materials for digital platforms. I believe continuous learning and consistent execution are the best ways to solve real-world problems.
+          </p>
+
+          <!-- Core Triad -->
+          <div class="about-triad">
+            <div class="triad-card">
+              <span class="triad-icon">⚡</span>
+              <div class="triad-title">Technology</div>
+              <p class="triad-desc">Web Development</p>
+            </div>
+            <div class="triad-card">
+              <span class="triad-icon">🎨</span>
+              <div class="triad-title">Creativity</div>
+              <p class="triad-desc">Graphic Design &amp; AI Prompt Art</p>
+            </div>
+            <div class="triad-card">
+              <span class="triad-icon">📊</span>
+              <div class="triad-title">Business</div>
+              <p class="triad-desc">Digital Marketing &amp; Growth</p>
+            </div>
+          </div>
+
+          <!-- Languages Spoken -->
+          <div class="languages-wrap">
+            <span class="languages-label">Languages:</span>
+            <span class="lang-badge">Tamil &bull; Native</span>
+            <span class="lang-badge">English &bull; Professional Working</span>
+          </div>
+        </div>
+
+        <!-- Quick Stats & Highlights Cards -->
+        <div class="stats-grid reveal-init delay-200">
+          <div class="glass-card stat-card tilt-card">
+            <div class="stat-icon">🎓</div>
+            <div class="stat-number">2023–2027</div>
+            <div class="stat-label">B.E. CSE (AIML)</div>
+            <p class="stat-subtext">Sri Sai Ranganathan Engg College</p>
+          </div>
+
+          <div class="glass-card stat-card tilt-card">
+            <div class="stat-icon">💻</div>
+            <div class="stat-number">2+</div>
+            <div class="stat-label">Responsive Websites</div>
+            <p class="stat-subtext">Clean, mobile-first web projects</p>
+          </div>
+
+          <div class="glass-card stat-card tilt-card">
+            <div class="stat-icon">🚀</div>
+            <div class="stat-number">48K+</div>
+            <div class="stat-label">Campaign Reach</div>
+            <p class="stat-subtext">Multi-channel social promotion</p>
+          </div>
+
+          <div class="glass-card stat-card tilt-card">
+            <div class="stat-icon">🎯</div>
+            <div class="stat-number">6+</div>
+            <div class="stat-label">Service Competencies</div>
+            <p class="stat-subtext">Web, Design, Marketing &amp; AI</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       3. SKILLS SECTION
+       ========================================================================= -->
+  <section id="skills" class="section" style="background: rgba(10, 12, 22, 0.4);">
+    <div class="container">
+      <div class="section-header reveal-init">
+        <div class="section-tag">My Toolkit</div>
+        <h2 class="section-title">Technical &amp; Creative Skills</h2>
+        <p class="section-desc">
+          Structured capabilities across front-end engineering, digital marketing, visual design, and emerging AI workflows.
+        </p>
+      </div>
+
+      <!-- Filter Tabs -->
+      <div class="skills-tabs reveal-init">
+        <button class="skill-tab-btn active" data-skill-filter="all">All Skills</button>
+        <button class="skill-tab-btn" data-skill-filter="web">Web Development</button>
+        <button class="skill-tab-btn" data-skill-filter="marketing">Digital Marketing</button>
+        <button class="skill-tab-btn" data-skill-filter="design">Design &amp; Branding</button>
+        <button class="skill-tab-btn" data-skill-filter="ai">AI &amp; Prompting</button>
+        <button class="skill-tab-btn" data-skill-filter="other">Other Tech</button>
+        <button class="skill-tab-btn" data-skill-filter="soft">Soft Skills</button>
+      </div>
+
+      <!-- Skills Grid -->
+      <div class="skills-wrapper">
+        
+        <!-- Category 1: Web Development -->
+        <div class="glass-card skill-category-card reveal-init" data-category="web">
+          <div class="category-header">
+            <div class="category-icon">🌐</div>
+            <div>
+              <h3 class="category-title">Web Development</h3>
+              <span style="font-size: 0.75rem; color: var(--clr-accent-cyan);">Frontend &amp; Responsive Layouts</span>
+            </div>
+          </div>
+          <div class="skill-items">
+            <div class="skill-item">
+              <div class="skill-info">
+                <span class="skill-name">HTML5 (Semantic &amp; SEO)</span>
+                <span class="skill-level-tag">90%</span>
+              </div>
+              <div class="progress-track"><div class="progress-fill" data-width="90%"></div></div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-info">
+                <span class="skill-name">CSS3 &amp; Modern Styling</span>
+                <span class="skill-level-tag">85%</span>
+              </div>
+              <div class="progress-track"><div class="progress-fill" data-width="85%"></div></div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-info">
+                <span class="skill-name">JavaScript (ES6+ Interactivity)</span>
+                <span class="skill-level-tag">80%</span>
+              </div>
+              <div class="progress-track"><div class="progress-fill" data-width="80%"></div></div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-info">
+                <span class="skill-name">Responsive Web Design</span>
+                <span class="skill-level-tag">92%</span>
+              </div>
+              <div class="progress-track"><div class="progress-fill" data-width="92%"></div></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Category 2: Digital Marketing -->
+        <div class="glass-card skill-category-card reveal-init delay-100" data-category="marketing">
+          <div class="category-header">
+            <div class="category-icon">📊</div>
+            <div>
+              <h3 class="category-title">Digital Marketing</h3>
+              <span style="font-size: 0.75rem; color: var(--clr-accent-violet);">Campaigns &amp; Audience Strategy</span>
+            </div>
+          </div>
+          <div class="skill-items">
+            <div class="skill-item">
+              <div class="skill-info">
+                <span class="skill-name">Social Media Marketing</span>
+                <span class="skill-level-tag">88%</span>
+              </div>
+              <div class="progress-track"><div class="progress-fill purple" data-width="88%"></div></div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-info">
+                <span class="skill-name">Campaign Management</span>
+                <span class="skill-level-tag">82%</span>
+              </div>
+              <div class="progress-track"><div class="progress-fill purple" data-width="82%"></div></div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-info">
+                <span class="skill-name">Engagement Improvement</span>
+                <span class="skill-level-tag">86%</span>
+              </div>
+              <div class="progress-track"><div class="progress-fill purple" data-width="86%"></div></div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-info">
+                <span class="skill-name">Digital Content Strategy</span>
+                <span class="skill-level-tag">84%</span>
+              </div>
+              <div class="progress-track"><div class="progress-fill purple" data-width="84%"></div></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Category 3: Design & Branding -->
+        <div class="glass-card skill-category-card reveal-init delay-200" data-category="design">
+          <div class="category-header">
+            <div class="category-icon">🎨</div>
+            <div>
+              <h3 class="category-title">Design &amp; Branding</h3>
+              <span style="font-size: 0.75rem; color: var(--clr-accent-pink);">Visual Identity &amp; Creatives</span>
+            </div>
+          </div>
+          <div class="skill-items">
+            <div class="skill-item">
+              <div class="skill-info">
+                <span class="skill-name">Graphic Design Fundamentals</span>
+                <span class="skill-level-tag">85%</span>
+              </div>
+              <div class="progress-track"><div class="progress-fill" data-width="85%"></div></div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-info">
+                <span class="skill-name">Branding &amp; Identity Design</span>
+                <span class="skill-level-tag">80%</span>
+              </div>
+              <div class="progress-track"><div class="progress-fill" data-width="80%"></div></div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-info">
+                <span class="skill-name">Promotional Ad Designs</span>
+                <span class="skill-level-tag">88%</span>
+              </div>
+              <div class="progress-track"><div class="progress-fill" data-width="88%"></div></div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-info">
+                <span class="skill-name">Social Media Creatives</span>
+                <span class="skill-level-tag">90%</span>
+              </div>
+              <div class="progress-track"><div class="progress-fill" data-width="90%"></div></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Category 4: AI & Prompt Engineering -->
+        <div class="glass-card skill-category-card reveal-init" data-category="ai">
+          <div class="category-header">
+            <div class="category-icon">✨</div>
+            <div>
+              <h3 class="category-title">AI &amp; Prompt Engineering</h3>
+              <span style="font-size: 0.75rem; color: var(--clr-accent-emerald);">Generative Workflows</span>
+            </div>
+          </div>
+          <div class="skill-items">
+            <div class="skill-item">
+              <div class="skill-info">
+                <span class="skill-name">AI Prompt Engineering</span>
+                <span class="skill-level-tag">88%</span>
+              </div>
+              <div class="progress-track"><div class="progress-fill emerald" data-width="88%"></div></div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-info">
+                <span class="skill-name">Image Generation Prompts</span>
+                <span class="skill-level-tag">85%</span>
+              </div>
+              <div class="progress-track"><div class="progress-fill emerald" data-width="85%"></div></div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-info">
+                <span class="skill-name">Video Generation Prompts</span>
+                <span class="skill-level-tag">80%</span>
+              </div>
+              <div class="progress-track"><div class="progress-fill emerald" data-width="80%"></div></div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-info">
+                <span class="skill-name">Creative AI Workflows</span>
+                <span class="skill-level-tag">84%</span>
+              </div>
+              <div class="progress-track"><div class="progress-fill emerald" data-width="84%"></div></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Category 5: Other Technical Skills -->
+        <div class="glass-card skill-category-card reveal-init delay-100" data-category="other">
+          <div class="category-header">
+            <div class="category-icon">⚙️</div>
+            <div>
+              <h3 class="category-title">Other Technical Skills</h3>
+              <span style="font-size: 0.75rem; color: var(--clr-accent-blue);">Foundations &amp; Utilities</span>
+            </div>
+          </div>
+          <div class="skill-items">
+            <div class="skill-item">
+              <div class="skill-info">
+                <span class="skill-name">Python Basics (AIML Foundation)</span>
+                <span class="skill-level-tag">75%</span>
+              </div>
+              <div class="progress-track"><div class="progress-fill" data-width="75%"></div></div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-info">
+                <span class="skill-name">SQL Basics &amp; Database Queries</span>
+                <span class="skill-level-tag">70%</span>
+              </div>
+              <div class="progress-track"><div class="progress-fill" data-width="70%"></div></div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-info">
+                <span class="skill-name">MS Office Suite (Excel, PPT, Word)</span>
+                <span class="skill-level-tag">92%</span>
+              </div>
+              <div class="progress-track"><div class="progress-fill" data-width="92%"></div></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Category 6: Soft Skills -->
+        <div class="glass-card skill-category-card reveal-init delay-200" data-category="soft">
+          <div class="category-header">
+            <div class="category-icon">🤝</div>
+            <div>
+              <h3 class="category-title">Soft Skills</h3>
+              <span style="font-size: 0.75rem; color: var(--clr-accent-cyan);">Collaboration &amp; Problem Solving</span>
+            </div>
+          </div>
+          <p style="font-size: 0.9rem; color: var(--text-muted); margin-bottom: 1rem;">
+            Essential personal and professional strengths that foster effective teamwork and successful execution:
+          </p>
+          <div class="soft-skills-cloud">
+            <span class="soft-skill-pill"><span>👥</span> Teamwork</span>
+            <span class="soft-skill-pill"><span>⏱️</span> Time Management</span>
+            <span class="soft-skill-pill"><span>👑</span> Leadership</span>
+            <span class="soft-skill-pill"><span>🧩</span> Problem Solving</span>
+            <span class="soft-skill-pill"><span>💡</span> Critical Thinking</span>
+            <span class="soft-skill-pill"><span>🗣️</span> Communication</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       4. PROJECTS SECTION
+       ========================================================================= -->
+  <section id="projects" class="section">
+    <div class="container">
+      <div class="section-header reveal-init">
+        <div class="section-tag">Featured Work</div>
+        <h2 class="section-title">Projects &amp; Case Studies</h2>
+        <p class="section-desc">
+          Practical applications across responsive frontend development, digital marketing campaigns, and visual branding.
+        </p>
+      </div>
+
+      <div class="projects-grid">
+        
+        <!-- Project 1: Responsive Website Projects -->
+        <div class="project-card glass-card tilt-card reveal-init">
+          <div class="project-preview">
+            <img src="assets/images/project-web.svg" alt="Responsive Website Projects" class="project-img" loading="lazy">
+            <div class="project-overlay">
+              <span class="project-badge">Web Development</span>
+            </div>
+          </div>
+          <div class="project-body">
+            <h3 class="project-title">Responsive Website Projects</h3>
+            <p class="project-description">
+              Built 2 modern responsive websites utilizing HTML, CSS, and JavaScript. Engineered with a focus on fluid multi-device layouts, clean interface aesthetics, and interactive navigation.
+            </p>
+            <ul class="project-highlights-list">
+              <li class="project-highlight-item">Adaptive layouts for mobile, tablet, and desktop</li>
+              <li class="project-highlight-item">Clean UI and user-friendly navigation flows</li>
+              <li class="project-highlight-item">Zero dependency interactive JS elements</li>
+            </ul>
+            <div class="project-tags">
+              <span class="project-tag">HTML5</span>
+              <span class="project-tag">CSS3</span>
+              <span class="project-tag">JavaScript</span>
+              <span class="project-tag">Responsive UI</span>
+            </div>
+            <div class="project-actions">
+              <button class="btn btn-primary btn-sm" data-project-target="responsive-web">
+                <span>View Details</span>
+                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M8.636 3.5a.5.5 0 0 0-.5-.5H1.5A1.5 1.5 0 0 0 0 4.5v10A1.5 1.5 0 0 0 1.5 16h10a1.5 1.5 0 0 0 1.5-1.5V7.864a.5.5 0 0 0-1 0V14.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5z"/><path fill-rule="evenodd" d="M16 .5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793L6.146 9.146a.5.5 0 1 0 .708.708L15 1.707V5.5a.5.5 0 0 0 1 0v-5z"/></svg>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 2: Digital Marketing Campaigns -->
+        <div class="project-card glass-card tilt-card reveal-init delay-100">
+          <div class="project-preview">
+            <img src="assets/images/project-marketing.svg" alt="Digital Marketing Campaigns" class="project-img" loading="lazy">
+            <div class="project-overlay">
+              <span class="project-badge" style="background: var(--clr-accent-emerald);">Digital Marketing</span>
+            </div>
+          </div>
+          <div class="project-body">
+            <h3 class="project-title">Digital Marketing Campaigns</h3>
+            <p class="project-description">
+              Managed end-to-end digital marketing initiatives and focused on improving audience engagement, content reach, and conversion optimization through targeted analytics.
+            </p>
+            <ul class="project-highlights-list">
+              <li class="project-highlight-item">Strategic campaign planning and content scheduling</li>
+              <li class="project-highlight-item">Audience engagement boost through promotional hooks</li>
+              <li class="project-highlight-item">Real-time performance and CTR metric tracking</li>
+            </ul>
+            <div class="project-tags">
+              <span class="project-tag">Campaign Strategy</span>
+              <span class="project-tag">Social Growth</span>
+              <span class="project-tag">Analytics</span>
+              <span class="project-tag">Content Promotion</span>
+            </div>
+            <div class="project-actions">
+              <button class="btn btn-primary btn-sm" data-project-target="digital-marketing">
+                <span>View Details</span>
+                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M8.636 3.5a.5.5 0 0 0-.5-.5H1.5A1.5 1.5 0 0 0 0 4.5v10A1.5 1.5 0 0 0 1.5 16h10a1.5 1.5 0 0 0 1.5-1.5V7.864a.5.5 0 0 0-1 0V14.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5z"/><path fill-rule="evenodd" d="M16 .5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793L6.146 9.146a.5.5 0 1 0 .708.708L15 1.707V5.5a.5.5 0 0 0 1 0v-5z"/></svg>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 3: Graphic Design & Branding -->
+        <div class="project-card glass-card tilt-card reveal-init delay-200">
+          <div class="project-preview">
+            <img src="assets/images/project-design.svg" alt="Graphic Design &amp; Branding" class="project-img" loading="lazy">
+            <div class="project-overlay">
+              <span class="project-badge" style="background: var(--clr-accent-pink); color: #ffffff;">Branding &amp; Design</span>
+            </div>
+          </div>
+          <div class="project-body">
+            <h3 class="project-title">Graphic Design &amp; Branding</h3>
+            <p class="project-description">
+              Created visual brand identities, vector logos, promotional posters, and social media creative assets for businesses and digital platforms to elevate market presence.
+            </p>
+            <ul class="project-highlights-list">
+              <li class="project-highlight-item">Distinctive brand visuals and harmonious color kits</li>
+              <li class="project-highlight-item">High-converting social media creatives &amp; banners</li>
+              <li class="project-highlight-item">AI prompt-assisted visual prototyping</li>
+            </ul>
+            <div class="project-tags">
+              <span class="project-tag">Graphic Design</span>
+              <span class="project-tag">Brand Identity</span>
+              <span class="project-tag">Social Creatives</span>
+              <span class="project-tag">Promotional Assets</span>
+            </div>
+            <div class="project-actions">
+              <button class="btn btn-primary btn-sm" data-project-target="graphic-design">
+                <span>View Details</span>
+                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M8.636 3.5a.5.5 0 0 0-.5-.5H1.5A1.5 1.5 0 0 0 0 4.5v10A1.5 1.5 0 0 0 1.5 16h10a1.5 1.5 0 0 0 1.5-1.5V7.864a.5.5 0 0 0-1 0V14.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5z"/><path fill-rule="evenodd" d="M16 .5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793L6.146 9.146a.5.5 0 1 0 .708.708L15 1.707V5.5a.5.5 0 0 0 1 0v-5z"/></svg>
+              </button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       5. EDUCATION TIMELINE SECTION
+       ========================================================================= -->
+  <section id="education" class="section" style="background: rgba(10, 12, 22, 0.4);">
+    <div class="container">
+      <div class="section-header reveal-init">
+        <div class="section-tag">Academic Path</div>
+        <h2 class="section-title">Education &amp; Qualifications</h2>
+        <p class="section-desc">
+          Formal academic foundation in Computer Science, Artificial Intelligence, and core engineering principles.
+        </p>
+      </div>
+
+      <div class="timeline-container">
+        
+        <!-- Timeline Item 1: College -->
+        <div class="timeline-item reveal-init">
+          <div class="timeline-node"></div>
+          <div class="glass-card timeline-card tilt-card">
+            <div class="timeline-badge-row">
+              <span class="timeline-period">2023 &ndash; 2027</span>
+              <span class="timeline-status">
+                <span class="timeline-status-dot"></span>
+                <span>Currently Pursuing</span>
+              </span>
+            </div>
+            <h3 class="timeline-title">Sri Sai Ranganathan Engineering College</h3>
+            <div class="timeline-subtitle">Bachelor of Engineering (B.E.) in Computer Science and Engineering</div>
+            <div style="font-size: 0.95rem; font-weight: 700; color: var(--clr-accent-cyan); margin-bottom: 0.75rem;">
+              Specialization: Artificial Intelligence &amp; Machine Learning (AIML)
+            </div>
+            <p class="timeline-desc">
+              Building a solid foundation in computer science theory, algorithms, artificial intelligence, machine learning concepts, data structures, and web technologies while engaging in practical development projects.
+            </p>
+            <div class="timeline-tags">
+              <span class="timeline-tag">Artificial Intelligence</span>
+              <span class="timeline-tag">Machine Learning</span>
+              <span class="timeline-tag">Data Structures &amp; Algorithms</span>
+              <span class="timeline-tag">Web Development</span>
+              <span class="timeline-tag">Database Management</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Timeline Item 2: School -->
+        <div class="timeline-item reveal-init delay-150">
+          <div class="timeline-node"></div>
+          <div class="glass-card timeline-card tilt-card">
+            <div class="timeline-badge-row">
+              <span class="timeline-period">Higher Secondary</span>
+              <span class="timeline-status" style="color: var(--text-muted);">
+                <span>Completed</span>
+              </span>
+            </div>
+            <h3 class="timeline-title">Brindavan Matriculation Higher Secondary School</h3>
+            <div class="timeline-subtitle">Higher Secondary Education (HSC)</div>
+            <p class="timeline-desc">
+              Completed foundational schooling with rigorous training in mathematics, physics, and science, developing strong analytical thinking, problem-solving, and disciplined work ethics.
+            </p>
+            <div class="timeline-tags">
+              <span class="timeline-tag">Mathematics</span>
+              <span class="timeline-tag">Science &amp; Analytical Studies</span>
+              <span class="timeline-tag">Leadership &amp; Discipline</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       6. SERVICES SECTION
+       ========================================================================= -->
+  <section id="services" class="section">
+    <div class="container">
+      <div class="section-header reveal-init">
+        <div class="section-tag">What I Offer</div>
+        <h2 class="section-title">Services &amp; Capabilities</h2>
+        <p class="section-desc">
+          Professional digital services tailored for startups, small businesses, digital creators, and collaborative projects.
+        </p>
+      </div>
+
+      <div class="services-grid">
+        
+        <!-- Service 1: Web Design -->
+        <div class="glass-card service-card tilt-card reveal-init">
+          <div class="service-header">
+            <div class="service-icon-box">🎨</div>
+            <span class="service-number">01</span>
+          </div>
+          <h3 class="service-title">Web Design</h3>
+          <p class="service-desc">
+            Crafting sleek, modern, user-centered interface layouts with clear visual hierarchy, accessible contrast, and engaging aesthetics.
+          </p>
+          <ul class="service-features-list">
+            <li class="service-feature-item">
+              <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" viewBox="0 0 16 16"><path d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022Z"/></svg>
+              <span>Custom UI/UX Wireframes</span>
+            </li>
+            <li class="service-feature-item">
+              <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" viewBox="0 0 16 16"><path d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022Z"/></svg>
+              <span>Dark &amp; Light Modern Aesthetics</span>
+            </li>
+            <li class="service-feature-item">
+              <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" viewBox="0 0 16 16"><path d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022Z"/></svg>
+              <span>Conversion-focused Layouts</span>
+            </li>
+          </ul>
+          <a href="#contact" class="service-cta-btn" data-service-inquiry="Web Design">
+            <span>Inquire Web Design</span>
+            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/></svg>
+          </a>
+        </div>
+
+        <!-- Service 2: Front-End Development -->
+        <div class="glass-card service-card tilt-card reveal-init delay-100">
+          <div class="service-header">
+            <div class="service-icon-box">💻</div>
+            <span class="service-number">02</span>
+          </div>
+          <h3 class="service-title">Front-End Development</h3>
+          <p class="service-desc">
+            Transforming visual designs into clean, responsive, semantic HTML5, CSS3, and JavaScript code with snappy performance.
+          </p>
+          <ul class="service-features-list">
+            <li class="service-feature-item">
+              <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" viewBox="0 0 16 16"><path d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022Z"/></svg>
+              <span>100% Responsive Multi-Device UI</span>
+            </li>
+            <li class="service-feature-item">
+              <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" viewBox="0 0 16 16"><path d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022Z"/></svg>
+              <span>Interactive JavaScript &amp; Modals</span>
+            </li>
+            <li class="service-feature-item">
+              <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" viewBox="0 0 16 16"><path d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022Z"/></svg>
+              <span>Clean, Well-Documented Code</span>
+            </li>
+          </ul>
+          <a href="#contact" class="service-cta-btn" data-service-inquiry="Front-End Development">
+            <span>Inquire Development</span>
+            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/></svg>
+          </a>
+        </div>
+
+        <!-- Service 3: Digital Marketing -->
+        <div class="glass-card service-card tilt-card reveal-init delay-200">
+          <div class="service-header">
+            <div class="service-icon-box">📈</div>
+            <span class="service-number">03</span>
+          </div>
+          <h3 class="service-title">Digital Marketing</h3>
+          <p class="service-desc">
+            Strategizing and managing multi-channel social media campaigns designed to grow brand exposure and cultivate audience engagement.
+          </p>
+          <ul class="service-features-list">
+            <li class="service-feature-item">
+              <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" viewBox="0 0 16 16"><path d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022Z"/></svg>
+              <span>Social Media Campaign Planning</span>
+            </li>
+            <li class="service-feature-item">
+              <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" viewBox="0 0 16 16"><path d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022Z"/></svg>
+              <span>Engagement &amp; Retention Growth</span>
+            </li>
+            <li class="service-feature-item">
+              <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" viewBox="0 0 16 16"><path d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022Z"/></svg>
+              <span>Content Calendars &amp; Promotion</span>
+            </li>
+          </ul>
+          <a href="#contact" class="service-cta-btn" data-service-inquiry="Digital Marketing">
+            <span>Inquire Marketing</span>
+            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/></svg>
+          </a>
+        </div>
+
+        <!-- Service 4: Graphic Design -->
+        <div class="glass-card service-card tilt-card reveal-init">
+          <div class="service-header">
+            <div class="service-icon-box">✒️</div>
+            <span class="service-number">04</span>
+          </div>
+          <h3 class="service-title">Graphic Design</h3>
+          <p class="service-desc">
+            Producing high-impact visual graphics, promotional social banners, flyers, posters, and digital marketing creatives that grab attention.
+          </p>
+          <ul class="service-features-list">
+            <li class="service-feature-item">
+              <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" viewBox="0 0 16 16"><path d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022Z"/></svg>
+              <span>Social Media Post &amp; Story Packs</span>
+            </li>
+            <li class="service-feature-item">
+              <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" viewBox="0 0 16 16"><path d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022Z"/></svg>
+              <span>Event Posters &amp; Digital Flyers</span>
+            </li>
+            <li class="service-feature-item">
+              <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" viewBox="0 0 16 16"><path d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022Z"/></svg>
+              <span>Digital Ad Creative Design</span>
+            </li>
+          </ul>
+          <a href="#contact" class="service-cta-btn" data-service-inquiry="Graphic Design">
+            <span>Inquire Graphics</span>
+            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/></svg>
+          </a>
+        </div>
+
+        <!-- Service 5: Branding & Promotional Design -->
+        <div class="glass-card service-card tilt-card reveal-init delay-100">
+          <div class="service-header">
+            <div class="service-icon-box">🏷️</div>
+            <span class="service-number">05</span>
+          </div>
+          <h3 class="service-title">Branding &amp; Promotional Design</h3>
+          <p class="service-desc">
+            Developing unified brand identities from monogram marks to color palettes and complete promotional collateral.
+          </p>
+          <ul class="service-features-list">
+            <li class="service-feature-item">
+              <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" viewBox="0 0 16 16"><path d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022Z"/></svg>
+              <span>Brand Logos &amp; Monograms</span>
+            </li>
+            <li class="service-feature-item">
+              <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" viewBox="0 0 16 16"><path d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022Z"/></svg>
+              <span>Color Systems &amp; Type Guidelines</span>
+            </li>
+            <li class="service-feature-item">
+              <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" viewBox="0 0 16 16"><path d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022Z"/></svg>
+              <span>Promotional Marketing Kits</span>
+            </li>
+          </ul>
+          <a href="#contact" class="service-cta-btn" data-service-inquiry="Branding &amp; Promotional Design">
+            <span>Inquire Branding</span>
+            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/></svg>
+          </a>
+        </div>
+
+        <!-- Service 6: AI Prompt Engineering -->
+        <div class="glass-card service-card tilt-card reveal-init delay-200">
+          <div class="service-header">
+            <div class="service-icon-box">🤖</div>
+            <span class="service-number">06</span>
+          </div>
+          <h3 class="service-title">AI Prompt Engineering</h3>
+          <p class="service-desc">
+            Harnessing state-of-the-art Generative AI models for text generation, high-res image synthesis, and automated creative workflows.
+          </p>
+          <ul class="service-features-list">
+            <li class="service-feature-item">
+              <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" viewBox="0 0 16 16"><path d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022Z"/></svg>
+              <span>Image &amp; Video Prompt Crafting</span>
+            </li>
+            <li class="service-feature-item">
+              <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" viewBox="0 0 16 16"><path d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022Z"/></svg>
+              <span>AI Content Generation Frameworks</span>
+            </li>
+            <li class="service-feature-item">
+              <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" viewBox="0 0 16 16"><path d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022Z"/></svg>
+              <span>Creative AI Pipeline Integration</span>
+            </li>
+          </ul>
+          <a href="#contact" class="service-cta-btn" data-service-inquiry="AI Prompt Engineering">
+            <span>Inquire AI Prompts</span>
+            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/></svg>
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       7. CONTACT SECTION
+       ========================================================================= -->
+  <section id="contact" class="section" style="background: rgba(10, 12, 22, 0.4);">
+    <div class="container">
+      <div class="section-header reveal-init">
+        <div class="section-tag">Get In Touch</div>
+        <h2 class="section-title">Let's Connect &amp; Collaborate</h2>
+        <p class="section-desc">
+          Have an upcoming project, an internship opportunity, or a creative design idea? Feel free to reach out directly.
+        </p>
+      </div>
+
+      <div class="contact-grid">
+        
+        <!-- Contact Info Cards Column -->
+        <div class="contact-info-col reveal-init">
+          
+          <!-- Phone Card -->
+          <div class="glass-card contact-card">
+            <div class="contact-card-icon">📞</div>
+            <div class="contact-card-body">
+              <div class="contact-label">Phone / WhatsApp</div>
+              <a href="tel:+917806875131" class="contact-value">+91 78068 75131</a>
+            </div>
+            <button class="copy-btn" data-copy="+917806875131" data-copy-label="Phone number" title="Copy Phone Number" aria-label="Copy phone number">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16"><path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1v-1z"/><path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5h3zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3z"/></svg>
+            </button>
+          </div>
+
+          <!-- Email Card -->
+          <div class="glass-card contact-card">
+            <div class="contact-card-icon">✉️</div>
+            <div class="contact-card-body">
+              <div class="contact-label">Email Address</div>
+              <a href="mailto:jeevanantham052005@gmail.com" class="contact-value">jeevanantham052005@gmail.com</a>
+            </div>
+            <button class="copy-btn" data-copy="jeevanantham052005@gmail.com" data-copy-label="Email address" title="Copy Email Address" aria-label="Copy email address">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16"><path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1v-1z"/><path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5h3zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3z"/></svg>
+            </button>
+          </div>
+
+          <!-- Location Card -->
+          <div class="glass-card contact-card">
+            <div class="contact-card-icon">📍</div>
+            <div class="contact-card-body">
+              <div class="contact-label">Location</div>
+              <span class="contact-value" style="font-size: 1rem;">Tiruppattur District, Tamil Nadu, India</span>
+            </div>
+            <button class="copy-btn" data-copy="Tiruppattur District, Tamil Nadu, India" data-copy-label="Location" title="Copy Location" aria-label="Copy location text">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16"><path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1v-1z"/><path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5h3zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3z"/></svg>
+            </button>
+          </div>
+
+          <!-- Direct Actions -->
+          <div style="background: rgba(14, 18, 34, 0.7); border: 1px solid var(--border-card); border-radius: var(--radius-md); padding: 1.5rem;">
+            <h4 style="font-size: 1.05rem; font-weight: 700; color: var(--text-primary); margin-bottom: 0.5rem;">Looking for Resume or Portfolio Deck?</h4>
+            <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 1rem;">
+              You can instantly view or save the verified resume formatted for recruiters and engineering teams.
+            </p>
+            <button class="btn btn-outline-glow btn-sm" data-resume-open style="width: 100%;">
+              <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="currentColor" viewBox="0 0 16 16"><path d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5z"/><path d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3z"/></svg>
+              <span>Open Verified Student Resume</span>
+            </button>
+          </div>
+
+        </div>
+
+        <!-- Functional Contact Form -->
+        <div class="glass-card contact-form-card reveal-init delay-150">
+          <div class="form-header">
+            <h3 class="form-title">Send a Direct Message</h3>
+            <p class="form-desc">Fill out this form and I will get back to your email within 24 hours.</p>
+          </div>
+
+          <form id="contactForm" class="contact-form" novalidate>
+            
+            <div class="form-group-row">
+              <!-- Name Input -->
+              <div class="form-group">
+                <label for="senderName" class="form-label">
+                  <span>Your Name</span>
+                  <span style="color: var(--clr-accent-cyan);">*</span>
+                </label>
+                <input type="text" id="senderName" class="form-control" placeholder="e.g. Alex Johnson" required>
+                <span class="form-error">Please enter your valid name.</span>
+              </div>
+
+              <!-- Email Input -->
+              <div class="form-group">
+                <label for="senderEmail" class="form-label">
+                  <span>Your Email</span>
+                  <span style="color: var(--clr-accent-cyan);">*</span>
+                </label>
+                <input type="email" id="senderEmail" class="form-control" placeholder="e.g. alex@example.com" required>
+                <span class="form-error">Please enter a valid email address.</span>
+              </div>
+            </div>
+
+            <!-- Service Selection -->
+            <div class="form-group">
+              <label for="serviceType" class="form-label">
+                <span>Service of Interest</span>
+                <span style="font-size: 0.75rem; color: var(--text-dim);">(Optional)</span>
+              </label>
+              <select id="serviceType" class="form-control">
+                <option value="">-- Select a Service / Topic --</option>
+                <option value="Web Design">Web Design</option>
+                <option value="Front-End Development">Front-End Development</option>
+                <option value="Digital Marketing">Digital Marketing &amp; Campaigns</option>
+                <option value="Graphic Design">Graphic Design &amp; Creatives</option>
+                <option value="Branding &amp; Promotional Design">Branding &amp; Promotional Design</option>
+                <option value="AI Prompt Engineering">AI Prompt Engineering</option>
+                <option value="Internship / Collaboration">Internship / Job Opportunity</option>
+                <option value="General Inquiry">General Question / Other</option>
+              </select>
+            </div>
+
+            <!-- Subject Input -->
+            <div class="form-group">
+              <label for="messageSubject" class="form-label">
+                <span>Subject</span>
+                <span style="color: var(--clr-accent-cyan);">*</span>
+              </label>
+              <input type="text" id="messageSubject" class="form-control" placeholder="Brief summary of your project or inquiry" required>
+              <span class="form-error">Please enter a subject.</span>
+            </div>
+
+            <!-- Message Textarea -->
+            <div class="form-group">
+              <label for="senderMessage" class="form-label">
+                <span>Your Message</span>
+                <span style="color: var(--clr-accent-cyan);">*</span>
+              </label>
+              <textarea id="senderMessage" class="form-control" placeholder="Describe your project goals, timelines, or question..." required></textarea>
+              <span class="form-error">Please enter your message (min 10 characters).</span>
+            </div>
+
+            <!-- Submit Button -->
+            <button type="submit" id="formSubmitBtn" class="btn btn-primary" style="width: 100%; padding: 0.95rem;">
+              <span>Send Message</span>
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16"><path d="M15.854.146a.5.5 0 0 1 .11.54l-5.819 14.547a.75.75 0 0 1-1.329.124l-3.178-4.995L.643 7.184a.75.75 0 0 1 .124-1.33L15.314.037a.5.5 0 0 1 .54.11ZM6.636 10.07l2.761 4.338L14.13 2.576 6.636 10.07Zm6.787-8.201L1.591 6.602l4.339 2.76 7.494-7.493Z"/></svg>
+            </button>
+
+          </form>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       FOOTER
+       ========================================================================= -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top">
+        
+        <!-- Brand Info -->
+        <div>
+          <div class="brand-logo">
+            <div class="brand-icon">J.</div>
+            <div class="brand-name">
+              <span class="brand-name-main">Jeevanantham</span>
+              <span class="brand-role">Developer &amp; Marketer</span>
+            </div>
+          </div>
+          <p class="footer-brand-desc">
+            B.E. Computer Science and Engineering (AIML) student combining responsive web technologies, creative design, and strategic digital marketing.
+          </p>
+        </div>
+
+        <!-- Quick Links -->
+        <div>
+          <div class="footer-col-title">Navigation</div>
+          <ul class="footer-links">
+            <li><a href="#about" class="footer-link">About Me</a></li>
+            <li><a href="#skills" class="footer-link">Skills &amp; Tools</a></li>
+            <li><a href="#projects" class="footer-link">Projects &amp; Work</a></li>
+            <li><a href="#education" class="footer-link">Education Timeline</a></li>
+            <li><a href="#services" class="footer-link">Services Offered</a></li>
+          </ul>
+        </div>
+
+        <!-- Direct Contact -->
+        <div>
+          <div class="footer-col-title">Contact</div>
+          <ul class="footer-links">
+            <li><a href="tel:+917806875131" class="footer-link">+91 78068 75131</a></li>
+            <li><a href="mailto:jeevanantham052005@gmail.com" class="footer-link">jeevanantham052005@gmail.com</a></li>
+            <li><span style="color: var(--text-dim); font-size: 0.9rem;">Tiruppattur, Tamil Nadu, IN</span></li>
+          </ul>
+        </div>
+
+        <!-- Social Media Channels -->
+        <div>
+          <div class="footer-col-title">Connect</div>
+          <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 1rem;">
+            Follow and connect across social platforms:
+          </p>
+          <div class="social-links-grid">
+            <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="GitHub Profile" title="GitHub">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" viewBox="0 0 16 16"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"/></svg>
+            </a>
+            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="LinkedIn Profile" title="LinkedIn">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" viewBox="0 0 16 16"><path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z"/></svg>
+            </a>
+            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="Twitter / X Profile" title="Twitter / X">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" viewBox="0 0 16 16"><path d="M12.6.75h2.454l-5.36 6.142L16 15.25h-4.937l-3.867-5.07-4.425 5.07H.316l5.733-6.57L0 .75h5.063l3.495 4.633L12.601.75Zm-.86 13.028h1.36L4.323 2.145H2.865l8.875 11.633Z"/></svg>
+            </a>
+            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="Instagram Profile" title="Instagram">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" viewBox="0 0 16 16"><path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.108 4.108 0 1 0 0 8.217 4.108 4.108 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z"/></svg>
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Footer Bottom -->
+      <div class="footer-bottom">
+        <div>
+          &copy; 2026 Jeevanantham. All rights reserved. Crafted with clean code &amp; modern dark design.
+        </div>
+        <button id="backToTopBtn" class="back-to-top-btn" aria-label="Scroll back to top">
+          <span>Back to Top</span>
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M8 15a.5.5 0 0 0 .5-.5V2.707l3.146 3.147a.5.5 0 0 0 .708-.708l-4-4a.5.5 0 0 0-.708 0l-4 4a.5.5 0 1 0 .708.708L7.5 2.707V14.5a.5.5 0 0 0 .5.5z"/></svg>
+        </button>
+      </div>
+    </div>
+  </footer>
+
+  <!-- =========================================================================
+       PROJECT DETAILS MODAL
+       ========================================================================= -->
+  <div id="projectModal" class="modal-overlay" aria-hidden="true" role="dialog" aria-modal="true">
+    <div class="modal-card">
+      <button id="modalCloseBtn" class="modal-close-btn" aria-label="Close Project Modal">&times;</button>
+      <div id="modalContentArea" class="modal-content-area">
+        <!-- Injected dynamically by projects.js -->
+      </div>
+    </div>
+  </div>
+
+  <!-- =========================================================================
+       RESUME PREVIEW & PRINT MODAL
+       ========================================================================= -->
+  <div id="resumeModal" class="modal-overlay" aria-hidden="true" role="dialog" aria-modal="true">
+    <div class="modal-card" style="max-width: 840px;">
+      <button id="resumeModalClose" class="modal-close-btn" aria-label="Close Resume Modal">&times;</button>
+      <div class="modal-content-area">
+        
+        <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 1.5rem; flex-wrap: wrap; gap: 1rem; border-bottom: 1px solid var(--border-subtle); padding-bottom: 1.25rem;">
+          <div>
+            <span class="project-badge" style="margin-bottom: 0.5rem;">Verified Student Profile</span>
+            <h2 style="font-size: 1.85rem; font-weight: 800; color: var(--text-primary);">Jeevanantham</h2>
+            <div style="font-size: 1rem; color: var(--clr-accent-cyan); font-weight: 600;">Student Developer | Web Designer | Digital Marketer</div>
+          </div>
+          <div style="display: flex; gap: 0.75rem; flex-wrap: wrap;">
+            <a href="assets/resume.html" target="_blank" class="btn btn-primary btn-sm">
+              <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" viewBox="0 0 16 16"><path d="M2.5 8a.5.5 0 1 0 0-1 .5.5 0 0 0 0 1z"/><path d="M5 1a2 2 0 0 0-2 2v2H2a2 2 0 0 0-2 2v3a2 2 0 0 0 2 2h1v1a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2v-1h1a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2h-1V3a2 2 0 0 0-2-2H5zM4 3a1 1 0 0 1 1-1h6a1 1 0 0 1 1 1v2H4V3zm1 5a2 2 0 0 0-2 2v1H2a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1h-1v-1a2 2 0 0 0-2-2H5zm7 2v3a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1v-3a1 1 0 0 1 1-1h6a1 1 0 0 1 1 1z"/></svg>
+              <span>Open Printable PDF Page</span>
+            </a>
+          </div>
+        </div>
+
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin-bottom: 1.5rem; background: rgba(18, 22, 42, 0.7); padding: 1.25rem; border-radius: var(--radius-md); border: 1px solid var(--border-subtle);">
+          <div>
+            <div style="font-size: 0.75rem; color: var(--text-muted); text-transform: uppercase;">Education</div>
+            <div style="font-size: 0.95rem; font-weight: 700; color: var(--text-primary);">B.E. CSE (AIML) (2023–2027)</div>
+            <div style="font-size: 0.8rem; color: var(--text-secondary);">Sri Sai Ranganathan Engg College</div>
+          </div>
+          <div>
+            <div style="font-size: 0.75rem; color: var(--text-muted); text-transform: uppercase;">Direct Contact</div>
+            <div style="font-size: 0.95rem; font-weight: 700; color: var(--text-primary);">+91 78068 75131</div>
+            <div style="font-size: 0.8rem; color: var(--text-secondary);">jeevanantham052005@gmail.com</div>
+          </div>
+          <div>
+            <div style="font-size: 0.75rem; color: var(--text-muted); text-transform: uppercase;">Location &amp; Languages</div>
+            <div style="font-size: 0.95rem; font-weight: 700; color: var(--text-primary);">Tiruppattur, Tamil Nadu</div>
+            <div style="font-size: 0.8rem; color: var(--text-secondary);">Tamil (Native) &bull; English (Prof.)</div>
+          </div>
+        </div>
+
+        <div style="margin-bottom: 1.5rem;">
+          <h4 style="font-size: 1.1rem; font-weight: 700; margin-bottom: 0.5rem; color: var(--text-primary);">Summary</h4>
+          <p style="font-size: 0.92rem; color: var(--text-secondary); line-height: 1.6;">
+            Dedicated B.E. Computer Science and Engineering (AIML) student with practical experience in responsive web design, digital marketing campaign strategy, graphic design, and creative AI prompt engineering. Passionate about building impactful digital products.
+          </p>
+        </div>
+
+        <div style="margin-bottom: 1.5rem;">
+          <h4 style="font-size: 1.1rem; font-weight: 700; margin-bottom: 0.5rem; color: var(--text-primary);">Core Competencies</h4>
+          <div class="project-tags">
+            <span class="project-tag">HTML5 / CSS3 / JavaScript</span>
+            <span class="project-tag">Responsive Web Design</span>
+            <span class="project-tag">Digital Marketing &amp; Social Campaigns</span>
+            <span class="project-tag">Graphic Design &amp; Brand Identity</span>
+            <span class="project-tag">AI Prompt Engineering</span>
+            <span class="project-tag">Python &amp; SQL Basics</span>
+            <span class="project-tag">Teamwork &amp; Problem Solving</span>
+          </div>
+        </div>
+
+        <div style="text-align: center; padding-top: 1rem; border-top: 1px solid var(--border-subtle);">
+          <a href="assets/resume.html" target="_blank" class="btn btn-primary">
+            <span>Download &amp; Print Full Resume (PDF)</span>
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Notification Container -->
+  <div id="toastContainer" class="toast-container" aria-live="polite"></div>
+
+  <!-- Main JavaScript Bundle (Combined Engine, Interactions, Modals & Validation) -->
+  <script src="script.js"></script>
+</body>
+</html>

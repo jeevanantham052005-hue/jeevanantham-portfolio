@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jeevanantham – Resume</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Segoe UI', Arial, sans-serif;
+      background: #f8fafc;
+      color: #1e293b;
+      padding: 40px 20px;
+    }
+    .resume {
+      max-width: 800px;
+      margin: 0 auto;
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 4px 32px rgba(0,0,0,0.10);
+      overflow: hidden;
+    }
+    /* Header */
+    .resume-header {
+      background: linear-gradient(135deg, #7c3aed 0%, #06b6d4 100%);
+      color: white;
+      padding: 40px 48px;
+    }
+    .resume-header h1 { font-size: 2.2rem; font-weight: 800; letter-spacing: -0.5px; }
+    .resume-header .role { font-size: 1rem; opacity: 0.9; margin: 6px 0 18px; }
+    .resume-header .contact-row {
+      display: flex; flex-wrap: wrap; gap: 16px; font-size: 0.85rem;
+    }
+    .resume-header .contact-row span { display: flex; align-items: center; gap: 6px; opacity: 0.9; }
+    /* Body */
+    .resume-body { padding: 36px 48px; }
+    .section { margin-bottom: 32px; }
+    .section-title {
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: #7c3aed;
+      border-bottom: 2px solid #e2e8f0;
+      padding-bottom: 8px;
+      margin-bottom: 16px;
+    }
+    p, li { font-size: 0.92rem; line-height: 1.7; color: #475569; }
+    ul { padding-left: 20px; }
+    /* Experience / Education rows */
+    .entry { margin-bottom: 18px; }
+    .entry-header { display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 4px; }
+    .entry-title { font-weight: 700; font-size: 0.97rem; color: #1e293b; }
+    .entry-sub { font-size: 0.86rem; color: #64748b; }
+    .entry-date {
+      font-size: 0.82rem; color: white;
+      background: linear-gradient(90deg, #7c3aed, #06b6d4);
+      padding: 2px 12px; border-radius: 20px; white-space: nowrap;
+    }
+    /* Skills */
+    .skills-grid { display: flex; flex-wrap: wrap; gap: 8px; }
+    .skill-tag {
+      background: #f1f5f9; border: 1px solid #e2e8f0;
+      padding: 4px 14px; border-radius: 20px;
+      font-size: 0.82rem; color: #475569; font-weight: 500;
+    }
+    /* Print button */
+    .print-bar {
+      text-align: center; padding: 24px;
+      background: #f8fafc; border-top: 1px solid #e2e8f0;
+    }
+    .print-btn {
+      display: inline-block;
+      background: linear-gradient(135deg, #7c3aed, #06b6d4);
+      color: white; font-weight: 700; font-size: 0.92rem;
+      padding: 12px 32px; border-radius: 8px;
+      text-decoration: none; cursor: pointer; border: none;
+    }
+    .print-btn:hover { opacity: 0.9; }
+    @media print {
+      body { background: white; padding: 0; }
+      .resume { box-shadow: none; border-radius: 0; }
+      .print-bar { display: none; }
+    }
+  </style>
+</head>
+<body>
+  <div class="resume">
+
+    <!-- Header -->
+    <div class="resume-header">
+      <h1>Jeevanantham</h1>
+      <div class="role">Student Developer · Web Designer · Digital Marketer</div>
+      <div class="contact-row">
+        <span>📧 jeevanantham052005@gmail.com</span>
+        <span>📞 +91 78068 75131</span>
+        <span>📍 Tiruppattur, Tamil Nadu, India</span>
+        <span>🌐 jeevanantham.dev</span>
+      </div>
+    </div>
+
+    <!-- Body -->
+    <div class="resume-body">
+
+      <!-- Summary -->
+      <div class="section">
+        <div class="section-title">Summary</div>
+        <p>
+          Motivated B.E. Computer Science & Engineering (AIML) student at Sri Sai Ranganathan Engineering College
+          with hands-on experience in web design, digital marketing, graphic design, and AI prompt engineering.
+          Passionate about creating practical, impactful digital solutions that blend technology and creativity.
+          Seeking internships and freelance opportunities to grow professionally.
+        </p>
+      </div>
+
+      <!-- Education -->
+      <div class="section">
+        <div class="section-title">Education</div>
+        <div class="entry">
+          <div class="entry-header">
+            <div>
+              <div class="entry-title">B.E. Computer Science &amp; Engineering (Artificial Intelligence &amp; Machine Learning)</div>
+              <div class="entry-sub">Sri Sai Ranganathan Engineering College, Tamil Nadu</div>
+            </div>
+            <span class="entry-date">2023 – 2027</span>
+          </div>
+        </div>
+        <div class="entry">
+          <div class="entry-header">
+            <div>
+              <div class="entry-title">Higher Secondary (12th Grade)</div>
+              <div class="entry-sub">Brindavan Matriculation Higher Secondary School</div>
+            </div>
+            <span class="entry-date">Completed 2023</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Core Competencies -->
+      <div class="section">
+        <div class="section-title">Core Competencies</div>
+        <ul>
+          <li>Front-End Web Development – HTML5, CSS3, JavaScript (ES6+), Responsive Design</li>
+          <li>Digital Marketing – SEO, Social Media Strategy, Google Ads, Content Creation</li>
+          <li>Graphic &amp; Brand Design – Adobe Photoshop, Canva, Logo &amp; Poster Design</li>
+          <li>AI Prompt Engineering – Workflow automation using ChatGPT, Gemini, Midjourney</li>
+          <li>Business Communication – Tamil (Native), English (Professional)</li>
+        </ul>
+      </div>
+
+      <!-- Skills -->
+      <div class="section">
+        <div class="section-title">Technical Skills</div>
+        <div class="skills-grid">
+          <span class="skill-tag">HTML5</span>
+          <span class="skill-tag">CSS3</span>
+          <span class="skill-tag">JavaScript</span>
+          <span class="skill-tag">Responsive Design</span>
+          <span class="skill-tag">SEO</span>
+          <span class="skill-tag">Social Media Marketing</span>
+          <span class="skill-tag">Google Ads</span>
+          <span class="skill-tag">Canva</span>
+          <span class="skill-tag">Adobe Photoshop</span>
+          <span class="skill-tag">Prompt Engineering</span>
+          <span class="skill-tag">ChatGPT</span>
+          <span class="skill-tag">Gemini AI</span>
+          <span class="skill-tag">Git &amp; GitHub</span>
+          <span class="skill-tag">Figma (Basic)</span>
+          <span class="skill-tag">Python (Basic)</span>
+        </div>
+      </div>
+
+      <!-- Services Offered -->
+      <div class="section">
+        <div class="section-title">Services Offered</div>
+        <ul>
+          <li><strong>Web Design &amp; Development:</strong> Custom responsive websites, landing pages, and portfolios</li>
+          <li><strong>Digital Marketing:</strong> Social media management, ad campaigns, and audience growth strategies</li>
+          <li><strong>Graphic Design:</strong> Logos, banners, posters, and complete brand identity kits</li>
+          <li><strong>AI-Powered Workflows:</strong> Content generation, automation, and AI tool consulting</li>
+        </ul>
+      </div>
+
+      <!-- Languages -->
+      <div class="section">
+        <div class="section-title">Languages</div>
+        <div class="skills-grid">
+          <span class="skill-tag">Tamil – Native</span>
+          <span class="skill-tag">English – Professional</span>
+        </div>
+      </div>
+
+    </div><!-- /.resume-body -->
+
+    <!-- Print Bar -->
+    <div class="print-bar">
+      <button class="print-btn" onclick="window.print()">⬇ Download &amp; Print Full Resume (PDF)</button>
+    </div>
+
+  </div><!-- /.resume -->
+</body>
+</html>
