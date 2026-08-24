@@ -1006,7 +1006,7 @@
                   <span>Your Name</span>
                   <span style="color: var(--clr-accent-cyan);">*</span>
                 </label>
-                <input type="text" id="senderName" class="form-control" placeholder="e.g. Alex Johnson" required>
+                <input type="text" id="senderName" name="name" class="form-control" placeholder="e.g. Alex Johnson" required>
                 <span class="form-error">Please enter your valid name.</span>
               </div>
 
@@ -1016,7 +1016,7 @@
                   <span>Your Email</span>
                   <span style="color: var(--clr-accent-cyan);">*</span>
                 </label>
-                <input type="email" id="senderEmail" class="form-control" placeholder="e.g. alex@example.com" required>
+                <input type="email" id="senderEmail" name="email" class="form-control" placeholder="e.g. alex@example.com" required>
                 <span class="form-error">Please enter a valid email address.</span>
               </div>
             </div>
@@ -1027,7 +1027,7 @@
                 <span>Service of Interest</span>
                 <span style="font-size: 0.75rem; color: var(--text-dim);">(Optional)</span>
               </label>
-              <select id="serviceType" class="form-control">
+              <select id="serviceType" name="service" class="form-control">
                 <option value="">-- Select a Service / Topic --</option>
                 <option value="Web Design">Web Design</option>
                 <option value="Front-End Development">Front-End Development</option>
@@ -1046,7 +1046,7 @@
                 <span>Subject</span>
                 <span style="color: var(--clr-accent-cyan);">*</span>
               </label>
-              <input type="text" id="messageSubject" class="form-control" placeholder="Brief summary of your project or inquiry" required>
+              <input type="text" id="messageSubject" name="subject" class="form-control" placeholder="Brief summary of your project or inquiry" required>
               <span class="form-error">Please enter a subject.</span>
             </div>
 
@@ -1056,7 +1056,7 @@
                 <span>Your Message</span>
                 <span style="color: var(--clr-accent-cyan);">*</span>
               </label>
-              <textarea id="senderMessage" class="form-control" placeholder="Describe your project goals, timelines, or question..." required></textarea>
+              <textarea id="senderMessage" name="message" class="form-control" placeholder="Describe your project goals, timelines, or question..." required></textarea>
               <span class="form-error">Please enter your message (min 10 characters).</span>
             </div>
 
